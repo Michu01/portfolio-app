@@ -1,6 +1,17 @@
 function PicsApp() {
   return (
     <div className="row p-3 bg-half-black">
+      <div className="col-4">
+        <h3 className="my-2">Pics App</h3>
+        <h5>A web app for browsing, rating and exploring art inspired by Japanese culture.</h5>
+        <span>
+          User can search art by artist, tags, creation date and many other criteria. 
+          User can favourite and rate pictures, to easily access them later.
+          Backend works by scraping image data from imageboards and storing it in database.
+          App is based on microservice architecture with two main services: api and data scraper.
+        </span>
+        <h5>Stack: React, TypeScript, Sass, ASP.NET, SQL Server, Entity Framework, RabbitMQ</h5>
+      </div>
       <div className="col-8">
         <div id="picsAppCarousel" className="carousel slide carousel-fade">
           <div className="carousel-indicators">
@@ -28,17 +39,6 @@ function PicsApp() {
             <span className="visually-hidden">Next</span>
           </button>
         </div>
-      </div>
-      <div className="col-4">
-        <h3 className="my-2">Pics App</h3>
-        <h5>A web app for browsing, rating and exploring art inspired by Japanese culture.</h5>
-        <span>
-          User can search art by artist, tags, creation date and many other criteria. 
-          User can favourite and rate pictures, to easily access them later.
-          Backend works by scraping image data from imageboards and storing it in database.
-          App is based on microservice architecture with two main services: api and data scraper.
-        </span>
-        <h5>Stack: React, TypeScript, Sass, ASP.NET, SQL Server, Entity Framework, RabbitMQ</h5>
       </div>
     </div>
   );

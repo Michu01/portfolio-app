@@ -1,4 +1,5 @@
 import AniSono from "./projects/AniSono";
+import CountriesApp from "./projects/CountriesApp";
 import Fractals from "./projects/Fractals";
 import PicsApp from "./projects/PicsApp";
 import QuizApp from "./projects/QuizApp";
@@ -16,6 +17,7 @@ function ProjectListComponent() {
         <QuizApp/>
         <Fractals/>
         <PicsApp/>
+        <CountriesApp/>
         <AniSono/>
         <RubikCubeSolver/>
         <RobotArm/>

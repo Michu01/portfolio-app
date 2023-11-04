@@ -9,6 +9,7 @@ function TechnologyListComponent() {
     { name: "JavaScript", src: "https://symbols.getvecta.com/stencil_25/41_javascript.0ca26ec4ab.svg" },
     { name: "TypeScript", src: "https://symbols.getvecta.com/stencil_25/87_typescript.cb2d7326fa.svg" },
     { name: "React", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png" },
+    { name: "GraphQL", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/GraphQL_Logo.svg/2048px-GraphQL_Logo.svg.png" },
     { name: "C#", src: "https://static-00.iconduck.com/assets.00/c-sharp-c-icon-456x512-9sej0lrz.png" },
     { name: ".NET", src: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Microsoft_.NET_logo.svg/1200px-Microsoft_.NET_logo.svg.png" },
     { name: "xUnit", src: "https://avatars.githubusercontent.com/u/2092016?s=280&v=4" },
@@ -20,6 +21,7 @@ function TechnologyListComponent() {
     { name: "Arduino", src: "https://brandslogos.com/wp-content/uploads/images/arduino-logo-1.png" },
     { name: "Azure DevOps", src: "https://cdn.iconscout.com/icon/free/png-256/free-azure-devops-3628645-3029870.png" },
     { name: "GIT", src: "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" },
+    { name: "JQuery", src: "https://cdn.worldvectorlogo.com/logos/jquery-4.svg" }
   ];
 
   const technologies = [
