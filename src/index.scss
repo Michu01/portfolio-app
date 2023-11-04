@@ -1,28 +1,24 @@
+@import "bootstrap/scss/bootstrap";
+
 body {
-  margin: 0;
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
-}
-
-#root {
-  height: 100vh;
-}
-
-#main {
+  color: white;
   background-image: url("../public/images/background.jpg");
   background-repeat: repeat-y;
   background-size: cover;
   background-position: top;
-  background-attachment: local;
-  overflow-y: scroll;
-  color: white;
 }
 
 .bg-half-black {
   background-color: rgba(0, 0, 0, 0.6);
+}
+
+.bg-blur {
+  backdrop-filter: blur(3px);
+}
+
+.inverted {
+    filter: invert(100%);
 }
