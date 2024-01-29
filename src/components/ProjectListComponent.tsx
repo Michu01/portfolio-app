@@ -5,6 +5,7 @@ import PicsApp from "./projects/PicsApp";
 import QuizApp from "./projects/QuizApp";
 import RobotArm from "./projects/RobotArm";
 import RubikCubeSolver from "./projects/RubikCubeSolver";
+import SortingApp from "./projects/SortingApp";
 import Wordle from "./projects/Wordle";
 
 function ProjectListComponent() {
@@ -18,6 +19,7 @@ function ProjectListComponent() {
         <Fractals/>
         <PicsApp/>
         <CountriesApp/>
+        <SortingApp/>
         <AniSono/>
         <RubikCubeSolver/>
         <RobotArm/>
