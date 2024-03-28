@@ -4,7 +4,7 @@ function Navbar(props: { className: string }) {
   return (
     <nav className={`navbar navbar-expand-lg navbar-dark sticky-top bg-blur bg-half-black px-4 py-3 mb-3 ${className}`}>
       <a className="navbar-brand" href="#home">Home</a>
-      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
         <span className="navbar-toggler-icon"></span>
       </button>
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
