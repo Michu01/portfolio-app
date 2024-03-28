@@ -1,6 +1,6 @@
 function AboutComponent() {
   return (
-    <div id="home" className="vstack bg-half-black p-3">
+    <div id="home" className="vstack bg-half-black rounded p-3">
       <h1>Hello! My name is Kuba</h1>
       <h3>I am an aspiring software developer.</h3>
       <h5 >I have created multiple projects in various programming languages and technologies.</h5>

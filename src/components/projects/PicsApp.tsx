@@ -1,46 +1,52 @@
-function PicsApp() {
-  return (
-    <div className="row p-3 bg-half-black">
-      <div className="col-4">
-        <h3 className="my-2">Pics App</h3>
-        <h5>A web app for browsing, rating and exploring art inspired by Japanese culture.</h5>
-        <span>
-          User can search art by artist, tags, creation date and many other criteria. 
-          User can favourite and rate pictures, to easily access them later.
-          Backend works by scraping image data from imageboards and storing it in database.
-          App is based on microservice architecture with two main services: api and data scraper.
-        </span>
-        <h5>Stack: React, TypeScript, Sass, ASP.NET, SQL Server, Entity Framework, RabbitMQ</h5>
-      </div>
-      <div className="col-8">
-        <div id="picsAppCarousel" className="carousel slide carousel-fade">
-          <div className="carousel-indicators">
-            <button type="button" data-bs-target="#picsAppCarousel" data-bs-slide-to="0" className="active"></button>
-            <button type="button" data-bs-target="#picsAppCarousel" data-bs-slide-to="1"></button>
-            <button type="button" data-bs-target="#picsAppCarousel" data-bs-slide-to="2"></button>
-          </div>
-          <div className="carousel-inner">
-            <div className="carousel-item active">
-              <img className="d-block w-100" src="images/pics-app/1.png" alt="First slide"/>
-            </div>
-            <div className="carousel-item">
-              <img className="d-block w-100" src="images/pics-app/2.png" alt="Second slide"/>
-            </div>
-            <div className="carousel-item">
-              <img className="d-block w-100" src="images/pics-app/3.png" alt="Third slide"/>
-            </div>
-          </div>
-          <button className="carousel-control-prev" type="button" data-bs-target="#picsAppCarousel" data-bs-slide="prev">
-            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span className="visually-hidden">Previous</span>
-          </button>
-          <button className="carousel-control-next" type="button" data-bs-target="#picsAppCarousel" data-bs-slide="next">
-            <span className="carousel-control-next-icon" aria-hidden="true"></span>
-            <span className="visually-hidden">Next</span>
-          </button>
-        </div>
-      </div>
-    </div>
-  );
+import AspDotNetChip from "../technologyChips/AspDotNetChip";
+import CSharpChip from "../technologyChips/CSharpChip";
+import EntityFrameworkChip from "../technologyChips/EntityFrameworkChip";
+import RabbitMQChip from "../technologyChips/RabbitMQChip";
+import ReactChip from "../technologyChips/ReactChip";
+import SassChip from "../technologyChips/SassChip";
+import SqlServerChip from "../technologyChips/SqlServerChip";
+import TypeScriptChip from "../technologyChips/TypeScriptChip";
+import ProjectComponent from "./ProjectComponent";
+
+type Props = {
+  index: number;
 }
+
+function PicsApp(props: Props) {
+  const { index } = props;
+
+  const name = "Pics App";
+  const formattedName = "pics-app";
+  const header = "A web app for browsing, rating and exploring art inspired by Japanese media";
+  const description =
+    "User can search art by artist, tags, creation date and many other criteria. " +
+    "They can favourite and rate pictures, to easily access them later. " +
+    "Backend works by scraping image data from imageboards and storing it in database. " +
+    "App is based on microservice architecture with two main services - api and data scraper. " + 
+    "RabbitMQ is used for sending messages between these two services.";
+  const technologyChips = [
+    <CSharpChip key="csharp" />,
+    <ReactChip key="react" />,
+    <TypeScriptChip key="typescript" />,
+    <SassChip key="sass" />,
+    <RabbitMQChip key="rabbit-mq" />,
+    <AspDotNetChip key="asp-net" />,
+    <EntityFrameworkChip key="entity-framework" />,
+    <SqlServerChip key="sql-server" />
+  ];
+  const assets = ["1.png", "2.png", "3.png"];
+
+  return (
+    <ProjectComponent
+      index={index}
+      name={name}
+      formattedName={formattedName}
+      description={description}
+      header={header}
+      technologyChips={technologyChips}
+      assets={assets}
+    />
+  )
+}
+
 export default PicsApp;

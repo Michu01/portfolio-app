@@ -1,50 +1,53 @@
-function QuizApp() {
+import GithubLink from "../GithubLink";
+import ProjectComponent from "./ProjectComponent";
+import AspDotNetChip from "../technologyChips/AspDotNetChip";
+import CSharpChip from "../technologyChips/CSharpChip";
+import EntityFrameworkChip from "../technologyChips/EntityFrameworkChip";
+import ReactChip from "../technologyChips/ReactChip";
+import SqlServerChip from "../technologyChips/SqlServerChip";
+import TypeScriptChip from "../technologyChips/TypeScriptChip";
+
+type Props = {
+  index: number;
+}
+
+function QuizApp(props: Props) {
+  const { index } = props;
+
+  const name = "Quizz";
+  const formattedName = "quiz-app";
+  const header = "A web app for creating and solving quizes";
+  const description =
+    "User can search quizes by name, categories and creator. " +
+    "They can solve quizes and see how many points did they score. " +
+    "User can create quizes, add, modify and remove questions. " +
+    "App includes user authentication and authorization.";
+  const technologyChips = [
+    <CSharpChip key="csharp" />,
+    <ReactChip key="react" />,
+    <TypeScriptChip key="typescript" />,
+    <AspDotNetChip key="asp-net" />,
+    <EntityFrameworkChip key="entity-framework" />,
+    <SqlServerChip key="sql-server" />
+  ];
+  const links = [
+    <GithubLink key="quiz-api" displayName="Quiz Api" navigationName="quizApi" />,
+    <GithubLink key="quiz-client" displayName="Quiz Client" navigationName="quiz-client" />
+  ];
+  const assets = ["1.png", "2.png", "3.png", "4.png", "5.png"];
+
   return (
-    <div className="row p-3 bg-half-black">
-      <div className="col-4">
-        <h3 className="my-2">Quizz</h3>
-        <h5>A web app for creating and solving quizes.</h5>
-        <h5>Stack: C#, ASP.NET, SQL Server, Entity Framework, TypeScript, React</h5>
-        <h5>Github: <a target="_blank" rel="noreferrer" href="https://github.com/Michu01/QuizApi">Api</a> <a target="_blank" rel="noreferrer" href="https://github.com/Michu01/quiz-client">Client</a></h5>
-      </div>
-      <div className="col-8">
-        <div id="quizAppCarousel" className="carousel slide carousel-fade">
-          <div className="carousel-indicators">
-            <button type="button" data-bs-target="#quizAppCarousel" data-bs-slide-to="0" className="active"></button>
-            <button type="button" data-bs-target="#quizAppCarousel" data-bs-slide-to="1"></button>
-            <button type="button" data-bs-target="#quizAppCarousel" data-bs-slide-to="2"></button>
-            <button type="button" data-bs-target="#quizAppCarousel" data-bs-slide-to="3"></button>
-            <button type="button" data-bs-target="#quizAppCarousel" data-bs-slide-to="4"></button>
-          </div>
-          <div className="carousel-inner">
-            <div className="carousel-item active">
-              <img className="d-block w-100" src="images/quiz-app/1.png" alt="First slide"/>
-            </div>
-            <div className="carousel-item">
-              <img className="d-block w-100" src="images/quiz-app/2.png" alt="Second slide"/>
-            </div>
-            <div className="carousel-item">
-              <img className="d-block w-100" src="images/quiz-app/3.png" alt="Third slide"/>
-            </div>
-            <div className="carousel-item">
-              <img className="d-block w-100" src="images/quiz-app/4.png" alt="Fourth slide"/>
-            </div>
-            <div className="carousel-item">
-              <img className="d-block w-100" src="images/quiz-app/5.png" alt="Fourth slide"/>
-            </div>
-          </div>
-          <button className="carousel-control-prev" type="button" data-bs-target="#quizAppCarousel" data-bs-slide="prev">
-            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span className="visually-hidden">Previous</span>
-          </button>
-          <button className="carousel-control-next" type="button" data-bs-target="#quizAppCarousel" data-bs-slide="next">
-            <span className="carousel-control-next-icon" aria-hidden="true"></span>
-            <span className="visually-hidden">Next</span>
-          </button>
-        </div>
-      </div>
-    </div>
-  );
+    <ProjectComponent
+      index={index}
+      name={name}
+      formattedName={formattedName}
+      description={description}
+      header={header}
+      technologyChips={technologyChips}
+      assets={assets}
+      links={links}
+    />
+  )
 }
 
 export default QuizApp;

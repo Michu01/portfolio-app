@@ -15,21 +15,38 @@
 }
 
 body {
-  color: rgba(255, 255, 255, 0.87);
-  background-image: url("images/background.jpg");
+  color: rgba(255, 255, 255);
+  
+  background-image: url("background.jpg");
   background-repeat: repeat-y;
   background-size: cover;
   background-position: top;
-}
-
-.bg-half-black {
-  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .bg-blur {
   backdrop-filter: blur(3px);
 }
 
-.inverted {
-    filter: invert(100%);
+.bg-half-black {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+a {
+  text-decoration: none;
+}
+
+.zoom-s {
+  transition: transform .2s;
+}
+
+.zoom-m {
+  transition: transform .2s;
+}
+
+.zoom-s:hover {
+  transform: scale(1.1);
+}
+
+.zoom-m:hover {
+  transform: scale(1.2);
 }

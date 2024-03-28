@@ -29,18 +29,18 @@ function TechnologyListComponent() {
   ];
 
   return (
-    <div id="technologies" className="p-3 bg-half-black">
+    <div id="technologies" className="p-3 bg-half-black rounded">
       <div className="row mb-3">
         <h2>Technologies I use</h2>
       </div>
       <div className="row mb-3">
-        <div className="hstack flex-wrap justify-content-center gap-3">
+        <div className="hstack flex-wrap justify-content-center gap-4">
           { technologiesWithLogos.map(e => <TechnologyComponent key={e.name} name={e.name} src={e.src}/>) }
         </div>
       </div>
       <div className="row">
-        <div className="hstack flex-wrap justify-content-center gap-3">
-          { technologies.map(e => <h5 key={e}>{e}</h5>) }
+        <div className="hstack flex-wrap justify-content-center gap-4">
+          { technologies.map(e => <h5 key={e} className="user-select-none zoom-s">{e}</h5>) }
         </div>
       </div>
     </div>
