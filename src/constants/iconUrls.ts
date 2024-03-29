@@ -16,7 +16,12 @@ const iconUrls = {
   expressJs: "https://w7.pngwing.com/pngs/925/447/png-transparent-express-js-node-js-javascript-mongodb-node-js-text-trademark-logo.png",
   ejs: "https://www.svgrepo.com/show/373574/ejs.svg",
   mongoDB: "https://cdn.icon-icons.com/icons2/2415/PNG/512/mongodb_original_logo_icon_146424.png",
-  arduino: "https://brandslogos.com/wp-content/uploads/images/arduino-logo-1.png"
+  arduino: "https://brandslogos.com/wp-content/uploads/images/arduino-logo-1.png",
+  unity: "https://seeklogo.com/images/U/unity-logo-988A22E703-seeklogo.com.png",
+  android: "https://iconape.com/wp-content/files/mv/291905/svg/291905.svg",
+  jetpackCompose: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjC97Z8BResg5dlPqczsRCFhP6zewWX0X0e7fVPG-G7PuUZwwZVsi9OPoqJYkgqT2h0FI95SsmWzVEgpt8b8HAqFiIxZ98TFtY4lE0b8UrtVJ2HrJebRwl6C9DslsQDl9KnBIrdHS6LtkY/s1600/jetpack+compose+icon_RGB.png",
+  kotlin: "https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin_Icon.png",
+  openGL: "https://upload.wikimedia.org/wikipedia/commons/e/e9/Opengl-logo.svg"
 }
 
 export default iconUrls;

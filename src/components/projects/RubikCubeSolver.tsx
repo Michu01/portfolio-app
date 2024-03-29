@@ -33,7 +33,6 @@ function RubikCubeSolver(props: Props) {
       technologyChips={technologyChips}
       assets={assets}
       links={links}
-      darkMode
     />
   )
 }

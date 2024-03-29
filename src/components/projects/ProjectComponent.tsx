@@ -51,8 +51,14 @@ function ProjectComponent(props: Props) {
         <div className={"carousel-item" + active}>
           {
             isVideo ?
-              <video className="d-block w-100" src={src} autoPlay loop muted /> :
-              <img className="d-block w-100" src={src} />
+              <video
+                className="d-block w-100"
+                src={src}
+                onMouseEnter={e => e.currentTarget.play()}
+                onMouseLeave={e => e.currentTarget.pause()}
+                loop muted
+              /> :
+              <img style={{ maxHeight: "60vh" }} className="d-block mw-100 mx-auto" src={src} loading="lazy" />
           }
         </div>
       );
