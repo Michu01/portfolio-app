@@ -46,6 +46,7 @@ function PicsApp(props: Props) {
       header={header}
       technologyChips={technologyChips}
       assetTypes={assetTypes}
+      hasPlaceholders
     />
   )
 }

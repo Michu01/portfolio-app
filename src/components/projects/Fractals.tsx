@@ -38,6 +38,7 @@ function Fractals(props: Props) {
       technologyChips={technologyChips}
       assetTypes={assetTypes}
       links={links}
+      hasPlaceholders
     />
   )
 }

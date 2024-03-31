@@ -47,6 +47,7 @@ function QuizApp(props: Props) {
       technologyChips={technologyChips}
       assetTypes={assetTypes}
       links={links}
+      hasPlaceholders
     />
   )
 }

@@ -11,12 +11,17 @@ type Props = {
   height?: number;
   assetTypes: AssetType[];
   darkMode?: boolean;
+  hasPlaceholders?: boolean;
   technologyChips: JSX.Element[];
   links?: JSX.Element[];
 }
 
 function ProjectComponent(props: Props) {
-  const { index, name, header, description, formattedName, assetTypes, darkMode, technologyChips, links } = { ...props, darkMode: props.darkMode ?? false };
+  const { index, name, header, description, formattedName, assetTypes, darkMode, technologyChips, links, hasPlaceholders } = { 
+    ...props, 
+    darkMode: props.darkMode ?? false,
+    hasPlaceholders: props.hasPlaceholders ?? false
+  };
 
   function Description() {
     return (
@@ -64,9 +69,11 @@ function ProjectComponent(props: Props) {
                 onMouseLeave={e => e.currentTarget.pause()}
                 loop muted
               /> :
+              hasPlaceholders ? 
               <ProgressiveImage src={src} placeholder={placeholder}>
                 {(src) => <img style={{ maxHeight: "60vh" }} className="d-block mw-100 mx-auto" src={src} />}
-              </ProgressiveImage>
+              </ProgressiveImage> :
+              <img style={{ maxHeight: "60vh" }} className="d-block mw-100 mx-auto" src={src} />
           }
         </div>
       );
