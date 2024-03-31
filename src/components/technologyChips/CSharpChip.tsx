@@ -1,4 +1,3 @@
-import iconUrls from "../../constants/iconUrls";
 import TechnologyChip from "./TechnologyChip";
 
 function CSharpChip() {
@@ -6,7 +5,7 @@ function CSharpChip() {
     <TechnologyChip
       name="C Sharp"
       color="#3a0091"
-      iconUrl={iconUrls.cSharp}
+      iconName="csharp"
     />
   );
 }

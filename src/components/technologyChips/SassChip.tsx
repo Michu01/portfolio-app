@@ -1,4 +1,3 @@
-import iconUrls from "../../constants/iconUrls";
 import TechnologyChip from "./TechnologyChip";
 
 function SassChip() {
@@ -6,7 +5,7 @@ function SassChip() {
     <TechnologyChip
       name="Sass"
       color="#cd669a"
-      iconUrl={iconUrls.sass}
+      iconName="sass"
     />
   );
 }

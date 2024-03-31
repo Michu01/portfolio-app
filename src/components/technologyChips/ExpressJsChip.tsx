@@ -1,4 +1,3 @@
-import iconUrls from "../../constants/iconUrls";
 import TechnologyChip from "./TechnologyChip";
 
 function ExpressJsChip() {
@@ -6,7 +5,6 @@ function ExpressJsChip() {
     <TechnologyChip
       name="Express.js"
       color="#828282"
-      iconUrl={iconUrls.expressJs}
     />
   );
 }

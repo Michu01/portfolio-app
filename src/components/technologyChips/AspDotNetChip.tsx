@@ -5,6 +5,7 @@ function AspDotNetChip() {
     <TechnologyChip
       name="ASP.NET"
       color="#5027d5"
+      iconName="dotnet"
     />
   );
 }

@@ -1,4 +1,3 @@
-import iconUrls from "../../constants/iconUrls";
 import TechnologyChip from "./TechnologyChip";
 
 function TypeScriptChip() {
@@ -6,7 +5,7 @@ function TypeScriptChip() {
     <TechnologyChip
       name="TypeScript"
       color="#007acc"
-      iconUrl={iconUrls.typeScript}
+      iconName="typescript"
     />
   );
 }

@@ -6,6 +6,7 @@ import EntityFrameworkChip from "../technologyChips/EntityFrameworkChip";
 import ReactChip from "../technologyChips/ReactChip";
 import SqlServerChip from "../technologyChips/SqlServerChip";
 import TypeScriptChip from "../technologyChips/TypeScriptChip";
+import AssetType from "../../types/AssetType";
 
 type Props = {
   index: number;
@@ -34,7 +35,7 @@ function QuizApp(props: Props) {
     <GithubLink key="quiz-api" displayName="Quiz Api" navigationName="quizApi" />,
     <GithubLink key="quiz-client" displayName="Quiz Client" navigationName="quiz-client" />
   ];
-  const assets = ["1.png", "2.png", "3.png", "4.png", "5.png"];
+  const assetTypes = ["image", "image", "image", "image", "image"] satisfies AssetType[];
 
   return (
     <ProjectComponent
@@ -44,7 +45,7 @@ function QuizApp(props: Props) {
       description={description}
       header={header}
       technologyChips={technologyChips}
-      assets={assets}
+      assetTypes={assetTypes}
       links={links}
     />
   )

@@ -1,4 +1,3 @@
-import iconUrls from "../../constants/iconUrls";
 import TechnologyChip from "./TechnologyChip";
 
 function ReactChip() {
@@ -6,7 +5,7 @@ function ReactChip() {
     <TechnologyChip
       name="React"
       color="#61dbfb"
-      iconUrl={iconUrls.react}
+      iconName="react"
     />
   );
 }

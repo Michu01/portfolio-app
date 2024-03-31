@@ -1,3 +1,4 @@
+import AssetType from "../../types/AssetType";
 import GithubLink from "../GithubLink";
 import CSharpChip from "../technologyChips/CSharpChip";
 import WPFChip from "../technologyChips/WPFChip";
@@ -21,7 +22,7 @@ function RubikCubeSolver(props: Props) {
   const links = [
     <GithubLink key="rubik-cube-solver" displayName="Rubik Cube Solver" navigationName="RubikCubeSolverApp" />
   ];
-  const assets = ["1.png", "2.png", "3.png"];
+  const assetTypes = ["image", "image", "image"] satisfies AssetType[];
 
   return (
     <ProjectComponent
@@ -31,8 +32,9 @@ function RubikCubeSolver(props: Props) {
       description={description}
       header={header}
       technologyChips={technologyChips}
-      assets={assets}
+      assetTypes={assetTypes}
       links={links}
+      darkMode
     />
   )
 }

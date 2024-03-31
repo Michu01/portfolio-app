@@ -1,4 +1,3 @@
-import iconUrls from "../../constants/iconUrls";
 import TechnologyChip from "./TechnologyChip";
 
 function WxWidgetsChip() {
@@ -6,7 +5,7 @@ function WxWidgetsChip() {
     <TechnologyChip
       name="wxWidgets"
       color="black"
-      iconUrl={iconUrls.wxWidgets}
+      iconName="wxwidgets"
     />
   );
 }

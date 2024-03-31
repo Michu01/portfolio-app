@@ -1,4 +1,3 @@
-import iconUrls from "../../constants/iconUrls";
 import TechnologyChip from "./TechnologyChip";
 
 function MongoDBChip() {
@@ -6,7 +5,7 @@ function MongoDBChip() {
     <TechnologyChip
       name="MongoDB"
       color="#1b2d39"
-      iconUrl={iconUrls.mongoDB}
+      iconName="mongodb"
     />
   );
 }

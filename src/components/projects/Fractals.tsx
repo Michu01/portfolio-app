@@ -1,3 +1,4 @@
+import AssetType from "../../types/AssetType";
 import GithubLink from "../GithubLink";
 import CppChip from "../technologyChips/CppChip";
 import SfmlChip from "../technologyChips/SfmlChip";
@@ -25,7 +26,7 @@ function Fractals(props: Props) {
   const links = [
     <GithubLink key="fractals" displayName="Fractals" navigationName="fractals" />
   ];
-  const assets = ["1.png", "2.png", "3.png", "4.png", "5.png"];
+  const assetTypes = ["image", "image", "image", "image", "image"] satisfies AssetType[];
 
   return (
     <ProjectComponent
@@ -35,7 +36,7 @@ function Fractals(props: Props) {
       header={header}
       description={description}
       technologyChips={technologyChips}
-      assets={assets}
+      assetTypes={assetTypes}
       links={links}
     />
   )

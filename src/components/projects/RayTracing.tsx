@@ -1,3 +1,4 @@
+import AssetType from "../../types/AssetType";
 import GithubLink from "../GithubLink";
 import CppChip from "../technologyChips/CppChip";
 import ImGuiChip from "../technologyChips/ImGuiChip";
@@ -26,7 +27,7 @@ function RayTracing(props: Props) {
   const links = [
     <GithubLink key="ray-tracing" displayName="Ray Tracing" navigationName="RayTracing" />
   ];
-  const assets = ["1.png", "2.png", "3.png", "4.mp4"];
+  const assetTypes = ["image", "image", "image", "video"] satisfies AssetType[];
 
   return (
     <ProjectComponent
@@ -36,7 +37,7 @@ function RayTracing(props: Props) {
       header={header}
       description={description}
       technologyChips={technologyChips}
-      assets={assets}
+      assetTypes={assetTypes}
       links={links}
     />
   )

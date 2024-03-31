@@ -1,4 +1,3 @@
-import iconUrls from "../../constants/iconUrls";
 import TechnologyChip from "./TechnologyChip";
 
 function UnityChip() {
@@ -6,7 +5,7 @@ function UnityChip() {
     <TechnologyChip
       name="Unity"
       color="#222c37"
-      iconUrl={iconUrls.unity}
+      iconName="unity"
     />
   );
 }

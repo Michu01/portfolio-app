@@ -1,4 +1,4 @@
-import iconUrls from "../../constants/iconUrls";
+import AssetType from "../../types/AssetType";
 import GithubLink from "../GithubLink";
 import GraphQLChip from "../technologyChips/GraphQLChip";
 import ReactChip from "../technologyChips/ReactChip";
@@ -25,9 +25,9 @@ function CountriesApp(props: Props) {
   ];
   const links = [
     <GithubLink key="countries-app" displayName="Countries App" navigationName="countries-app" />,
-    <a className="btn btn-light fs-5" href="https://countries-app-michu01.vercel.app/"><img className="me-2 mb-1" height={24} src={iconUrls.vercel} />Live Version</a>
+    <a key="live-version" className="btn btn-light fs-5" href="https://countries-app-michu01.vercel.app/"><img className="me-2 mb-1" height={24} src="/logos/vercel.svg" />Live Version</a>
   ];
-  const assets = ["1.png", "2.png", "3.png"];
+  const assetTypes = ["image", "image", "image"] satisfies AssetType[];
 
   return (
     <ProjectComponent
@@ -37,7 +37,7 @@ function CountriesApp(props: Props) {
       description={description}
       header={header}
       technologyChips={technologyChips}
-      assets={assets}
+      assetTypes={assetTypes}
       links={links}
     />
   )

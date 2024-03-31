@@ -2,9 +2,11 @@ function TechnologyComponent(props: { name: string, src: string }) {
   const { name, src } = props;
 
   return (
-    <div style={{ width: "14em" }} className="vstack gap-1 align-items-center zoom-m user-select-none">
-      <img height={100} src={src} alt={name} referrerPolicy="no-referrer"/>
-      <h5>{name}</h5>
+    <div className="row" style={{ width: "16em", height: "10em" }}>
+      <div className="col-auto mx-auto zoom-m user-select-none text-center">
+        <img className="mb-1" height={100} src={`/logos/${src}.svg`} alt={name} />
+        <h5>{name}</h5>
+      </div>
     </div>
   );
 }

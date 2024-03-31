@@ -1,4 +1,3 @@
-import iconUrls from "../../constants/iconUrls";
 import TechnologyChip from "./TechnologyChip";
 
 function ArduinoChip() {
@@ -6,7 +5,7 @@ function ArduinoChip() {
     <TechnologyChip
       name="Arduino"
       color="#129ba0"
-      iconUrl={iconUrls.arduino}
+      iconName="arduino"
     />
   );
 }

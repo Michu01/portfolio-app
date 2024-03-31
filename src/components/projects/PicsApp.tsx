@@ -1,3 +1,4 @@
+import AssetType from "../../types/AssetType";
 import AspDotNetChip from "../technologyChips/AspDotNetChip";
 import CSharpChip from "../technologyChips/CSharpChip";
 import EntityFrameworkChip from "../technologyChips/EntityFrameworkChip";
@@ -34,7 +35,7 @@ function PicsApp(props: Props) {
     <EntityFrameworkChip key="entity-framework" />,
     <SqlServerChip key="sql-server" />
   ];
-  const assets = ["1.png", "2.png", "3.png"];
+  const assetTypes = ["image", "image", "image"] satisfies AssetType[];
 
   return (
     <ProjectComponent
@@ -44,7 +45,7 @@ function PicsApp(props: Props) {
       description={description}
       header={header}
       technologyChips={technologyChips}
-      assets={assets}
+      assetTypes={assetTypes}
     />
   )
 }

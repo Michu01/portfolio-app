@@ -1,4 +1,3 @@
-import iconUrls from "../../constants/iconUrls";
 import TechnologyChip from "./TechnologyChip";
 
 function JetpackComposeChip() {
@@ -6,7 +5,7 @@ function JetpackComposeChip() {
     <TechnologyChip
       name="Jetpack Compose"
       color="#083042"
-      iconUrl={iconUrls.jetpackCompose}
+      iconName="jetpack-compose"
     />
   );
 }

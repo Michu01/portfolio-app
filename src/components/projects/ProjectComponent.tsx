@@ -1,4 +1,6 @@
+import ProgressiveImage from "react-progressive-graceful-image";
 import range from "../../utility/range";
+import AssetType from "../../types/AssetType";
 
 type Props = {
   index: number;
@@ -6,14 +8,15 @@ type Props = {
   header: string;
   description?: string;
   formattedName: string;
-  assets: string[];
+  height?: number;
+  assetTypes: AssetType[];
   darkMode?: boolean;
   technologyChips: JSX.Element[];
   links?: JSX.Element[];
 }
 
 function ProjectComponent(props: Props) {
-  const { index, name, header, description, formattedName, assets, darkMode, technologyChips, links } = { ...props, darkMode: props.darkMode ?? false };
+  const { index, name, header, description, formattedName, assetTypes, darkMode, technologyChips, links } = { ...props, darkMode: props.darkMode ?? false };
 
   function Description() {
     return (
@@ -40,15 +43,18 @@ function ProjectComponent(props: Props) {
       return <button type="button" data-bs-target={"#" + carouselId} data-bs-slide-to={index} className={active} />;
     }
 
-    function CarouselItem(props: { asset: string, index: number }) {
-      const { asset, index } = props;
+    function CarouselItem(props: { assetType: AssetType, index: number }) {
+      const { assetType, index } = props;
 
       const active = index == 0 ? " active" : "";
-      const isVideo = asset.endsWith(".mp4");
-      const src = "projects/" + formattedName + "/" + asset;
+      const isVideo = assetType == "video";
+      const extension = isVideo ? ".mp4" : ".png";
+      const root = "projects/" + formattedName + "/" + (index + 1);
+      const src = root + extension;
+      const placeholder = root + "-placeholder.jpg";
 
       return (
-        <div className={"carousel-item" + active}>
+        <div className={"carousel-item h-100" + active}>
           {
             isVideo ?
               <video
@@ -58,7 +64,9 @@ function ProjectComponent(props: Props) {
                 onMouseLeave={e => e.currentTarget.pause()}
                 loop muted
               /> :
-              <img style={{ maxHeight: "60vh" }} className="d-block mw-100 mx-auto" src={src} loading="lazy" />
+              <ProgressiveImage src={src} placeholder={placeholder}>
+                {(src) => <img style={{ maxHeight: "60vh" }} className="d-block mw-100 mx-auto" src={src} />}
+              </ProgressiveImage>
           }
         </div>
       );
@@ -68,10 +76,10 @@ function ProjectComponent(props: Props) {
       <div className="col-12 col-xl-8">
         <div id={carouselId} className="carousel slide" data-bs-theme={mode}>
           <div className="carousel-indicators">
-            {range(0, assets.length).map(e => <CarouselIndicator key={e} index={e} />)}
+            {range(0, assetTypes.length).map(e => <CarouselIndicator key={e} index={e} />)}
           </div>
           <div className="carousel-inner">
-            {assets.map((e, i) => <CarouselItem key={e} asset={e} index={i} />)}
+            {assetTypes.map((e, i) => <CarouselItem key={i} assetType={e} index={i} />)}
           </div>
           <button className="carousel-control-prev" type="button" data-bs-target={"#" + carouselId} data-bs-slide="prev">
             <span className="carousel-control-prev-icon"></span>
@@ -89,7 +97,7 @@ function ProjectComponent(props: Props) {
   const isEven = index % 2 == 0;
 
   return (
-    <div className="row p-3 bg-half-black rounded">
+    <div className="row p-3 bg-half-black rounded gap-2 gap-xl-0">
       {isEven ? <Description /> : <Display />}
       {isEven ? <Display /> : <Description />}
     </div>

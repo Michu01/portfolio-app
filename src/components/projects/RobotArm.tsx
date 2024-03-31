@@ -1,3 +1,4 @@
+import AssetType from "../../types/AssetType";
 import GithubLink from "../GithubLink";
 import ArduinoChip from "../technologyChips/ArduinoChip";
 import CSharpChip from "../technologyChips/CSharpChip";
@@ -24,7 +25,7 @@ function RobotArm(props: Props) {
   const links = [
     <GithubLink key="robot-arm" displayName="Robot Arm App" navigationName="RobotArmApp" />
   ];
-  const assets = ["1.png", "2.png", "3.png", "4.png", "5.png"];
+  const assetTypes = ["image", "image", "image", "image", "image"] satisfies AssetType[];
 
   return (
     <ProjectComponent
@@ -34,7 +35,7 @@ function RobotArm(props: Props) {
       description={description}
       header={header}
       technologyChips={technologyChips}
-      assets={assets}
+      assetTypes={assetTypes}
       links={links}
       darkMode
     />

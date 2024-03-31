@@ -1,3 +1,4 @@
+import AssetType from "../../types/AssetType";
 import GithubLink from "../GithubLink";
 import CppChip from "../technologyChips/CppChip";
 import WxWidgetsChip from "../technologyChips/WxWidgetsChip";
@@ -23,7 +24,7 @@ function SortingApp(props: Props) {
   const links = [
     <GithubLink key="sorting-app" displayName="Sorting App" navigationName="SortingApp" />
   ];
-  const assets = ["1.mp4", "2.mp4", "3.mp4"];
+  const assetTypes = ["video", "video", "video"] satisfies AssetType[];
 
   return (
     <ProjectComponent
@@ -33,7 +34,7 @@ function SortingApp(props: Props) {
       description={description}
       header={header}
       technologyChips={technologyChips}
-      assets={assets}
+      assetTypes={assetTypes}
       links={links}
       darkMode
     />

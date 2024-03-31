@@ -1,3 +1,4 @@
+import AssetType from "../../types/AssetType";
 import GithubLink from "../GithubLink";
 import AspDotNetChip from "../technologyChips/AspDotNetChip";
 import CSharpChip from "../technologyChips/CSharpChip";
@@ -26,7 +27,7 @@ function Wordle(props: Props) {
     <GithubLink key="wordle" displayName="Wordle" navigationName="wordleclone" />,
     <GithubLink key="dictionary-api" displayName="Dictionary Api" navigationName="DictionaryAPI" />
   ];
-  const assets = ["1.png", "2.png", "3.png"];
+  const assetTypes = ["image", "image", "image"] satisfies AssetType[];
 
   return (
     <ProjectComponent
@@ -36,7 +37,7 @@ function Wordle(props: Props) {
       description={description}
       header={header}
       technologyChips={technologyChips}
-      assets={assets}
+      assetTypes={assetTypes}
       links={links}
       darkMode
     />

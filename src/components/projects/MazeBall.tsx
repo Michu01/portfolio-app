@@ -1,3 +1,4 @@
+import AssetType from "../../types/AssetType";
 import GithubLink from "../GithubLink";
 import CSharpChip from "../technologyChips/CSharpChip";
 import UnityChip from "../technologyChips/UnityChip";
@@ -24,7 +25,7 @@ function MazeBall(props: Props) {
   const links = [
     <GithubLink key="maze-ball" displayName="Maze Ball Game" navigationName="MazeBall" />
   ];
-  const assets = ["1.mp4", "2.png", "3.png"];
+  const assetTypes = ["video", "image", "image"] satisfies AssetType[];
 
   return (
     <ProjectComponent
@@ -34,7 +35,7 @@ function MazeBall(props: Props) {
       header={header}
       description={description}
       technologyChips={technologyChips}
-      assets={assets}
+      assetTypes={assetTypes}
       links={links}
     />
   )

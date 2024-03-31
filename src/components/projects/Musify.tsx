@@ -1,3 +1,4 @@
+import AssetType from "../../types/AssetType";
 import GithubLink from "../GithubLink";
 import AndroidChip from "../technologyChips/AndroidChip";
 import JetpackComposeChip from "../technologyChips/JetpackComposeChip";
@@ -26,7 +27,7 @@ function Musify(props: Props) {
   const links = [
     <GithubLink key="musify" displayName="Musify" navigationName="Musify" />
   ];
-  const assets = ["1.png", "2.png", "3.png", "4.png", "5.png"];
+  const assetTypes = ["image", "image", "image", "image", "image"] satisfies AssetType[];
 
   return (
     <ProjectComponent
@@ -36,7 +37,7 @@ function Musify(props: Props) {
       header={header}
       description={description}
       technologyChips={technologyChips}
-      assets={assets}
+      assetTypes={assetTypes}
       links={links}
     />
   )

@@ -1,4 +1,3 @@
-import iconUrls from "../../constants/iconUrls";
 import TechnologyChip from "./TechnologyChip";
 
 function CppChip() {
@@ -6,7 +5,7 @@ function CppChip() {
     <TechnologyChip
       name="C++"
       color="#004283"
-      iconUrl={iconUrls.cpp}
+      iconName="cpp"
     />
   );
 }

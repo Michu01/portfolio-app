@@ -1,4 +1,3 @@
-import iconUrls from "../../constants/iconUrls";
 import TechnologyChip from "./TechnologyChip";
 
 function EJSChip() {
@@ -6,7 +5,7 @@ function EJSChip() {
     <TechnologyChip
       name="EJS"
       color="#90a93a"
-      iconUrl={iconUrls.ejs}
+      iconName="ejs"
     />
   );
 }

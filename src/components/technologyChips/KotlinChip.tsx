@@ -1,4 +1,3 @@
-import iconUrls from "../../constants/iconUrls";
 import TechnologyChip from "./TechnologyChip";
 
 function KotlinChip() {
@@ -6,7 +5,7 @@ function KotlinChip() {
     <TechnologyChip
       name="Kotlin"
       color="#f08125"
-      iconUrl={iconUrls.kotlin}
+      iconName="kotlin"
     />
   );
 }
