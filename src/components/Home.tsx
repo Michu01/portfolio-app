@@ -8,16 +8,16 @@ function Home(props: { className?: string }) {
 
   return (
     <div className={`container ${className}`}>
-      <div className="row mb-5">
+      <div className="row mb-5 p-3">
         <AboutComponent/>
       </div>
-      <div className="row mb-5">
+      <div className="row mb-5 p-3">
         <TechnologyListComponent/>
       </div>
-      <div className="row mb-5">
+      <div className="row mb-5 p-3">
         <ProjectListComponent/>
       </div>
-      <div className="row">
+      <div className="row p-3">
         <ContactComponent/>
       </div>
     </div>
