@@ -1,5 +1,6 @@
 import AssetType from "../../types/AssetType";
 import GithubLink from "../GithubLink";
+import LiveVersionLink from "../LiveVersionLink";
 import GraphQLChip from "../technologyChips/GraphQLChip";
 import ReactChip from "../technologyChips/ReactChip";
 import TypeScriptChip from "../technologyChips/TypeScriptChip";
@@ -25,7 +26,7 @@ function CountriesApp(props: Props) {
   ];
   const links = [
     <GithubLink key="countries-app" displayName="Countries App" navigationName="countries-app" />,
-    <a key="live-version" className="btn btn-light fs-5" href="https://countries-app-michu01.vercel.app/"><img className="me-2 mb-1" height={24} src="/logos/vercel.svg" />Live Version</a>
+    <LiveVersionLink key="live" href="https://countries-app-michu01.vercel.app/" />
   ];
   const assetTypes = ["image", "image", "image"] satisfies AssetType[];
 

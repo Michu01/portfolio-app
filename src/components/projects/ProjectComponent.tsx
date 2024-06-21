@@ -80,7 +80,7 @@ function ProjectComponent(props: Props) {
     }
 
     return (
-      <div className="col-12 col-xl-8">
+      <div className="col-12 col-xl-8 d-flex flex-column justify-content-center">
         <div id={carouselId} className="carousel slide" data-bs-theme={mode}>
           <div className="carousel-indicators">
             {range(0, assetTypes.length).map(e => <CarouselIndicator key={e} index={e} />)}

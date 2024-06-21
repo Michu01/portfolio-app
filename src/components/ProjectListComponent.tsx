@@ -3,6 +3,7 @@ import CountriesApp from "./projects/CountriesApp";
 import Fractals from "./projects/Fractals";
 import MazeBall from "./projects/MazeBall";
 import Musify from "./projects/Musify";
+import OutOfOffice from "./projects/OutOfOffice";
 import PicsApp from "./projects/PicsApp";
 import QuizApp from "./projects/QuizApp";
 import RayTracing from "./projects/RayTracing";
@@ -12,6 +13,7 @@ import SortingApp from "./projects/SortingApp";
 import Wordle from "./projects/Wordle";
 
 const projects = [
+  (index: number) => <OutOfOffice key={index} index={index} />,
   (index: number) => <QuizApp key={index} index={index} />,
   (index: number) => <Fractals key={index} index={index} />,
   (index: number) => <PicsApp key={index} index={index} />,
